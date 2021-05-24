@@ -53,6 +53,13 @@ function iniciarJogo(){
         snake[0].y = 16 * box
     }
 
+    for(cont = 1; cont < snake.length; cont++){
+        if(snake[0].x == snake[cont].x && snake[0].y == snake[cont].y){
+            clearInterval(jogo)
+            alert("Game Over")
+        }
+    }
+
     criarBG()
     criarCobrinha()
     drawFood()
